@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -eu
+#!/usr/bin/env -S bash -eu
 
 dirs=(facet_at_08 syn_at_2 syn_at_1)
 cmds=()
