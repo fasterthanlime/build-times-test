@@ -20,7 +20,7 @@ jobs:
         run: cargo binstall -y hyperfine
 
       - name: Build all with build-all.sh
-        run: ./build-all.sh -j1
+        run: ./hyperfine.sh -j1
 
       - name: Upload cargo-timings artifact
         uses: actions/upload-artifact@v4
@@ -41,7 +41,7 @@ jobs:
         run: cargo binstall -y hyperfine
 
       - name: Build all with build-all.sh (no -j1)
-        run: ./build-all.sh
+        run: ./hyperfine.sh
 
       - name: Upload cargo-timings artifact
         uses: actions/upload-artifact@v4
