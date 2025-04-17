@@ -1,0 +1,38 @@
+name: Build All
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build all with build-all.sh
+        run: ./build-all.sh -j1
+
+      - name: Upload cargo-timings artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cargo-timings
+          path: target/cargo-timings
+
+  build-no-j1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build all with build-all.sh (no -j1)
+        run: ./build-all.sh
+
+      - name: Upload cargo-timings artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cargo-timings
+          path: target/cargo-timings
