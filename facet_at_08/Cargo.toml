@@ -4,4 +4,4 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-facet = "0.8.2"
+facet = { version = "0.8.2", features = ["reflect"] }

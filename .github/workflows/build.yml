@@ -13,6 +13,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install cargo-binstall
+        run: curl -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
+
+      - name: Install hyperfine via cargo-binstall
+        run: cargo binstall -y hyperfine
+
       - name: Build all with build-all.sh
         run: ./build-all.sh -j1
 
@@ -27,6 +33,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Install cargo-binstall
+        run: curl -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
+
+      - name: Install hyperfine via cargo-binstall
+        run: cargo binstall -y hyperfine
 
       - name: Build all with build-all.sh (no -j1)
         run: ./build-all.sh

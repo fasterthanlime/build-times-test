@@ -16,6 +16,7 @@ checksum = "5cb0473ea3fd965b34eafafc9ea7a4d6b1cfb762485a1af3e3a39d63ee680042"
 dependencies = [
  "facet-core",
  "facet-derive",
+ "facet-reflect",
 ]
 
 [[package]]
@@ -57,6 +58,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "facet-reflect"
+version = "0.8.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0bd195449e857db44f81cd3d93a45cc5f348e909d2ce2017253c1e98d8173ce9"
+dependencies = [
+ "bitflags",
+ "facet-core",
+ "log",
+ "yansi",
+]
+
+[[package]]
 name = "facet_at_08"
 version = "0.1.0"
 dependencies = [
@@ -68,6 +81,12 @@ name = "impls"
 version = "1.0.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7a46645bbd70538861a90d0f26c31537cdf1e44aae99a794fb75a664b70951bc"
+
+[[package]]
+name = "log"
+version = "0.4.27"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "13dc2df351e3202783a1fe0d44375f7295ffb4049267b0f3018346dc122a1d94"
 
 [[package]]
 name = "mutants"
@@ -106,3 +125,9 @@ dependencies = [
  "proc-macro2",
  "shadow_counted",
 ]
+
+[[package]]
+name = "yansi"
+version = "1.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cfe53a6657fd280eaa890a3bc59152892ffa3e30101319d168b781ed6529b049"
